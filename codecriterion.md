@@ -1,6 +1,6 @@
 < [Back](README.md)
 
-Chinamobo Objective-C 编码规范
+Objective-C 编码规范
 ======================
 
 <a name='TOC'/></a>目录
