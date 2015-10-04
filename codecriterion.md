@@ -39,10 +39,10 @@ Objective-C 编码规范
 Code                     | Commentary
 -------------------------|-----------
 insertObjectatIndex      | √
-insertat                 | √
-removeObjectAtIndex      | √
+insertat                 | 不清晰，insert什么？at表示什么？
+removeObjectAtIndex      | √ 因为参数指明了移除的对象
 removeObject             | √
-remove                   | √
+remove                   | 不清晰，要移除什么？
 
 * 1.2 一致
 * 1.3 避免自引用（self Reference）
