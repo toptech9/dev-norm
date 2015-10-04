@@ -49,6 +49,13 @@ remove                   | 不清晰，要移除什么？
  * 你可能认为某个缩写众所周知，但其实未必，特别是你周围的开发者语言文化背景不同时
  * 有一些历史悠久的缩写还是可以使用的
 ```
+Code                     | Commentary
+-------------------------|-----------
+destinationSelection     | √
+destSet                  | 不清晰
+setBackgroundColor       | √ 
+setBkgdColor             | 不清晰
+
 * 1.2 一致
 * 1.3 避免自引用（self Reference）
 * 1.4 仿照 Cocoa 风格来，使用长命名风格
