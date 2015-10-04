@@ -53,7 +53,7 @@ Code                     | Commentary
 -------------------------|-----------
 destinationSelection     | √
 destSet                  | 不清晰
-setBackgroundColor       | √ 
+setBackgroundColor       | √
 setBkgdColor             | 不清晰
 
 API命名避免歧义
