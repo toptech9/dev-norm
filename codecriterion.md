@@ -73,7 +73,6 @@ Code                                      | Commentary
 * 1.3 避免自引用（self Reference）
 ```C
 命名不应自引用
-
 这里的自引用指的是在词尾引用自身
 ```
 Code                                | Commentary
@@ -81,6 +80,13 @@ Code                                | Commentary
 NSString                            | √
 NSStringObject                      | 自引用，所有NSString都是对象，不用额外声明
 
+```C
+Mask与Notification忽略此规则
+```
+Code                                                      | Commentary
+----------------------------------------------------------|-----------
+NSUnderlineByWordMark                                     | √
+NSTableViewColumnDidMoveNotification                      | √
 
 * 1.4 仿照 Cocoa 风格来，使用长命名风格
 * 1.5 变量命名推荐的命名语素顺序是：最开头是命名空间简写，然后越重要、区别度越大的语素越要往前放。经典的结构是：作用范围+限定修饰+类型。例：
