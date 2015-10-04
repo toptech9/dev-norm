@@ -56,6 +56,8 @@ destSet                  | 不清晰
 setBackgroundColor       | √ 
 setBkgdColor             | 不清晰
 
+API命名避免歧义
+
 * 1.2 一致
 * 1.3 避免自引用（self Reference）
 * 1.4 仿照 Cocoa 风格来，使用长命名风格
