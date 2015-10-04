@@ -34,6 +34,15 @@ Objective-C 编码规范
 ### <a name='naming-basic-principle'></a>基本原则
 
 * 1.1 清晰
+ 尽量清晰又简洁，无法两全时清晰更重要
+Code                     | Commentary
+-------------------------|-----------
+insertObjectatIndex      | √
+insertat                 | √
+removeObjectAtIndex      | √
+removeObject             | √
+remove                   | √
+
 * 1.2 一致
 * 1.3 避免自引用（self Reference）
 * 1.4 仿照 Cocoa 风格来，使用长命名风格
