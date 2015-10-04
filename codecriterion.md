@@ -35,6 +35,7 @@ Objective-C 编码规范
 
 * 1.1 清晰
  尽量清晰又简洁，无法两全时清晰更重要
+
 Code                     | Commentary
 -------------------------|-----------
 insertObjectatIndex      | √
