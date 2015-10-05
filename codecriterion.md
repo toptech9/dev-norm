@@ -212,58 +212,6 @@ IB                           | Interface Builder
 
 ### <a name='naming-method'></a>方法名
 
-* 如果property表示为名词，格式如下
-  * - (type)noun;
-  * - (void)setNoun:(type)aNoun; 
-  * - (BOOL)isAdjective;
-
-  1.- (NSString *)title;
-  2.- (void)setTitle:(NSString *)aTitle;
-
-
-* 如果property表示为形容词，格式如下
-  * - (BOOL)isAdjective;
-  * - (void)setVerbObject:(BOOL)flag;    
-
-  1.- (BOOL)isEditable; 
-  2.- (void)setEditable:(BOOL)flag;
-
-
-* 如果property表示为动词，格式如下（动词用一般现在时）
-  * - (BOOL)verbObject;
-  * - (void)setVerbObject:(BOOL)flag;
-
-  1.- (BOOL)showsAlpha;
-  2.- (void)setShowsAlpha:(BOOL)flag;
-
-
-不要把动词的过去分词形式当作形容词使用 
-
-Code                                              | Commentary
---------------------------------------------------|-----------
--(void)setAcceptsGlyphInfo:(BOOL)flag;            | √
--(BOOL)acceptsGlyphInfo;                          | √
--(void)setGlyphInfoAccepted:(BOOL)flag;           | x
--(BOOL)glyphInfoAccepted;                         | x
-
-你可能使用情态动词（can、should、will等）来增加可读性，不过不要使用 do或 does
-
-Code                                              | Commentary
---------------------------------------------------|-----------
--(void)setCanHide:(BOOL)flag;                     | √
--(BOOL)canHide;                                   | √
--(void)setShouldCloseDocument:(BOOL)flag;         | √
--(BOOL)shouldCloseDocument;                       | √
--(void)setDoesAcceptGlyphInfo:(BOOL)flag;         | x
--(BOOL)doesAcceptGlyphInfo;                       | x
-
-
-只有方法需要间接返回多个值的情况下才使用 get
-像这种接收多个参数的方法应该能够传入nil，因为调用者未必对每个参数都感兴趣
-
-Code                                                                                        | Commentary
---------------------------------------------------------------------------------------------|-----------
--(void)getLineDash:(float *)pattern   count:(int *)count   phase:(float *)phase;            | √
 
 
 * 以小写字母开始，之后单词的首字母大写。
@@ -322,6 +270,62 @@ Code                                                                            
 
 
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
+
+
+2.getter和setter方法（Accessor Methods）
+* 如果property表示为名词，格式如下
+  * - (type)noun;
+  * - (void)setNoun:(type)aNoun; 
+  * - (BOOL)isAdjective;
+
+  1.- (NSString *)title;
+  2.- (void)setTitle:(NSString *)aTitle;
+
+
+* 如果property表示为形容词，格式如下
+  * - (BOOL)isAdjective;
+  * - (void)setVerbObject:(BOOL)flag;    
+
+  1.- (BOOL)isEditable; 
+  2.- (void)setEditable:(BOOL)flag;
+
+
+* 如果property表示为动词，格式如下（动词用一般现在时）
+  * - (BOOL)verbObject;
+  * - (void)setVerbObject:(BOOL)flag;
+
+  1.- (BOOL)showsAlpha;
+  2.- (void)setShowsAlpha:(BOOL)flag;
+
+
+不要把动词的过去分词形式当作形容词使用 
+
+Code                                              | Commentary
+--------------------------------------------------|-----------
+-(void)setAcceptsGlyphInfo:(BOOL)flag;            | √
+-(BOOL)acceptsGlyphInfo;                          | √
+-(void)setGlyphInfoAccepted:(BOOL)flag;           | x
+-(BOOL)glyphInfoAccepted;                         | x
+
+你可能使用情态动词（can、should、will等）来增加可读性，不过不要使用 do或 does
+
+Code                                              | Commentary
+--------------------------------------------------|-----------
+-(void)setCanHide:(BOOL)flag;                     | √
+-(BOOL)canHide;                                   | √
+-(void)setShouldCloseDocument:(BOOL)flag;         | √
+-(BOOL)shouldCloseDocument;                       | √
+-(void)setDoesAcceptGlyphInfo:(BOOL)flag;         | x
+-(BOOL)doesAcceptGlyphInfo;                       | x
+
+
+只有方法需要间接返回多个值的情况下才使用 get
+像这种接收多个参数的方法应该能够传入nil，因为调用者未必对每个参数都感兴趣
+
+Code                                                                                        | Commentary
+--------------------------------------------------------------------------------------------|-----------
+-(void)getLineDash:(float *)pattern   count:(int *)count   phase:(float *)phase;            | √
+
 * 以 `get`、`set` 开头的方法有特殊的意义，不要随意定义。
   1. set 是属性默认的设置方法，如果函数不是为了设置类成员，则不要用 `set` 开头，可用 `setup` 替代。
   2. get 和属性方法无关，但在 Cocoa 中，其标准行为是通过引用传值，而不是直接返回结果的。欲获取变量，直接以变量名为名，如：`userInfomation`，而不是 `getUserInfomation`。
