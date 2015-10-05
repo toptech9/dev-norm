@@ -9,6 +9,7 @@ Objective-C 编码规范
   * [基本原则](#naming-basic-principle)
   * [命名空间](#namespace)
   * [前缀](#prefix)
+  * [书写约定](#writerule)
   * [方法名](#naming-method)
   * [协议名](#naming-protocol)
   * [通知命名](#naming-notifications)
@@ -109,6 +110,9 @@ YHCommentToolbar    // OK，把类型（toolbar）置后
 * 命名类、协议、函数、常量和typedef结构体时使用前缀
   * 方法名不使用前缀（因为它存在于特定类的命名空间中）
   * 结构体字段不使用前缀
+ 
+### <a name='writerule'></a>书写约定
+
 ### <a name='namespace'></a>命名空间
 * 类名、protocols、C 函数、常量、结构体和枚举应带有命名空间前缀；
 * 类方法不要带前缀，结构体字段也不要带前缀
