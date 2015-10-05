@@ -112,7 +112,12 @@ YHCommentToolbar    // OK，把类型（toolbar）置后
 ### <a name='namespace'></a>命名空间
 * 类名、protocols、C 函数、常量、结构体和枚举应带有命名空间前缀；
 * 类方法不要带前缀，结构体字段也不要带前缀
-
+Prefix                       | Cocoa Framework
+-----------------------------|-----------
+NS                           | Foundation
+NS                           | Application Kit
+AB                           | Address Book
+IB                           | Interface Builder
 
 ### <a name='naming-method'></a>方法名
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
