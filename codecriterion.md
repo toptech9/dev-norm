@@ -112,7 +112,15 @@ YHCommentToolbar    // OK，把类型（toolbar）置后
   * 结构体字段不使用前缀
  
 ### <a name='writerule'></a>书写约定
+在命名API元素时， 使用驼峰命名法（如runTheWordsTogether），并注意以下书写约定：
 
+* 方法名
+  * 小写第一个字母，大写之后所有单词的首字母，不使用前缀
+  * 如果方法名以一个众所周知的大写缩略词开始，该规则不适用
+如TIFFRepresentation (NSImage)
+```Objective-C
+fileExistsAtPath:isDirectory:
+```
 ### <a name='namespace'></a>命名空间
 * 类名、protocols、C 函数、常量、结构体和枚举应带有命名空间前缀；
 * 类方法不要带前缀，结构体字段也不要带前缀
