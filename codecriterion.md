@@ -404,6 +404,39 @@ will 表示某些事将要发生
 - (BOOL)windowShouldClose:(id)sender;
 ```
 
+4.集合方法   
+
+为了管理集合中的元素，集合应该有这几个方法
+
+```Objective-C
+- (void)addElement:(elementType)anObj;
+- (void)removeElement:(elementType)anObj;
+- (NSArray *)elements;
+
+- (void)addLayoutManager:(NSLayoutManager *)obj;
+- (void)removeLayoutManager:(NSLayoutManager *)obj;
+- (NSArray *)layoutManagers;
+```
+
+如果集合是无序的，返回一个NSSet比NSarray更好
+
+如果需要在集合中的特定位置插入元素，使用类似下面的方法
+
+```Objective-C
+- (void)insertLayoutManager:(NSLayoutManager *)obj atIndex:(int)index; 
+- (void)removeLayoutManagerAtIndex:(int)index;
+```
+
+其他集合方法示例
+
+```Objective-C
+- (void)addChildWindow:(NSWindow *)childWin ordered:(NSWindowOrderingMode)place;
+- (void)removeChildWindow:(NSWindow *)childWin;
+- (NSArray *)childWindows;
+- (NSWindow *)parentWindow;
+- (void)setParentWindow:(NSWindow *)window;
+```
+
 
 ### <a name='naming-protocol'></a>协议名
 好的协议名应能立刻让人分辨出这不是一个类名，除了以常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：`NSCoding`、`NSCopying`、`NSLocking`。
