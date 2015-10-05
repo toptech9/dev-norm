@@ -11,6 +11,7 @@ Objective-C 编码规范
   * [前缀](#prefix)
   * [书写约定](#writerule)
   * [class与protocol命名](#class-protocol)
+  * [头文件](#header-file)
   * [方法名](#naming-method)
   * [协议名](#naming-protocol)
   * [通知命名](#naming-notifications)
@@ -157,6 +158,19 @@ NSLock                   | 不好，看起来像一个class
 关联class的protocol
 * 一些protoco聚集了一堆无关方法，并试图与某个class关联在一起，由这个class来主导
   * 这种protocol与class同名 如NSObject protocol
+
+
+### <a name='header-file'></a>头文件
+头文件的命名极其重要，因为它可以指出头文件包含的内容：
+
+* 声明一个孤立的class或protocol
+  * 将声明放入单独的文件
+  * 使头文件名与声明的class/protocol相同
+
+Header file                  | Declares
+-----------------------------|-----------
+NSLocale.h                   | 包含NSLocale class
+
 
 
 ### <a name='namespace'></a>命名空间
