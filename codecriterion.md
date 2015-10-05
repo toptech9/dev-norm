@@ -171,6 +171,32 @@ Header file                  | Declares
 -----------------------------|-----------
 NSLocale.h                   | 包含NSLocale class
 
+* 声明关联的class或protocol
+  * 将关联的声明（class/category/protocol）放入同一个头文件
+  * 头文件名与主要的class/category/protocol相同
+
+Header file                  | Declares
+-----------------------------|-----------
+NSString.h                   | 包含NSString 和 NSMutableString classes
+NSLock.h                     | 包含NSLocking protocol 和 NSLock,NSConditionLock,NSRecursiveLock classes
+
+
+* Framework头文件
+  * 每个framework都应该有一个同名头文件
+  * Include了框架内其他所有头文件
+
+Header file                  | Declares
+-----------------------------|-----------
+Foundation.h                 | Foundation.framework
+
+* 添加API到另一个framework
+  * 如果要在一个framework中为另一个framework的class catetgory添加方法，加上单词“Additions” 
+  * 如Application Kit的NSBundleAdditions.h 文件
+
+* 关联的函数、数据类型
+  * 如果你有一组关联的函数、常量、结构体或其他数据类型，将它们放到一个名字合适的头文件中
+  * 如Application Kit的NSGraphics.h 
+
 
 
 ### <a name='namespace'></a>命名空间
