@@ -148,6 +148,12 @@ class
 * 大多数protocol聚集了一堆相关方法，并不关联class
 * 这种protocol使用ing形式以和class区分开来
 
+Code                     | Commentary
+-------------------------|-----------
+NSLocking                | √
+NSLock                   | 不好，看起来像一个class
+
+
 关联class的protocol
 * 一些protoco聚集了一堆无关方法，并试图与某个class关联在一起，由这个class来主导
   * 这种protocol与class同名 如NSObject protocol
