@@ -231,18 +231,21 @@ Code                         | Commentary
 -(NSSize)getCellSize         | x
 
 在所有参数之前使用关键字
+
 Code                                                                                      | Commentary
 ------------------------------------------------------------------------------------------|-----------
 -(void)sendAction:(SEL)aSelector    toObject:(id)anObject     forAllCells:(BOOL)flag;     |√
 -(void)sendAction:(SEL)aSelector    :(id)anObject     :(BOOL)flag;                        |x
 
 确保参数之前的关键字充分描述了参数
+
 Code                                               | Commentary
 ---------------------------------------------------|-----------
 -(id)viewWithTag:(NSInteger)aTag                   |√
 -(id)taggedView:(int)aTag                          |x
 
 创建自定义 init 方法时，记得指明关联的元素
+
 Code                                                    | Commentary
 --------------------------------------------------------|-----------
 -(id)initWithFrame:(CGRect)frameRect                    |√
@@ -250,12 +253,14 @@ Code                                                    | Commentary
 
 不要使用 and 来连接作为接收者属性的关键字
 * 虽然下面的例子使用 and 看似不错，但是一旦参数非常多时就容易出现问题
+
 Code                                                                                                    | Commentary
 --------------------------------------------------------------------------------------------------------|-----------
 -(int)runModeForDirectory:(NSString *)path   file:(NSString *)name    types:(NSArray *)fileTypes        |√
 -(int)runModeForDirectory:(NSString *)path  andFile:(NSString *)name  andTypes:(NSArray *)fileTypes     |x
 
 * 除非方法描述了两个独立的操作，才使用 and 来连接它们
+
 Code                                                                                                       | Commentary
 -----------------------------------------------------------------------------------------------------------|-----------
 -(BOOL)openFile:(NSString *)fullPath   withApplication:(NSString *)appname  andDeactivate:(BOOL)flag       |√
