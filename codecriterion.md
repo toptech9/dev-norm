@@ -10,6 +10,7 @@ Objective-C 编码规范
   * [命名空间](#namespace)
   * [前缀](#prefix)
   * [书写约定](#writerule)
+  * [class与protocol命名](#class-protocol)
   * [方法名](#naming-method)
   * [协议名](#naming-protocol)
   * [通知命名](#naming-notifications)
@@ -135,6 +136,21 @@ NSCellDisabled
 * 避免使用下划线作为私有方法的前缀，Apple保留这一方式的使用
   * 强行使用可能会导致命名冲突，即Apple已有的方法被覆盖，这会导致灾难性后果
   * 实例变量使用下划线作为前缀还是允许的
+
+
+### <a name='class-protocol'></a>class-protocol命名
+
+class
+* class的名称应该包含一个名词，用以表明这个类是什么（或者做了什么），并拥有合适的前缀
+* 如NSString、NSDate、NSScanner、UIApplication、UIButton
+
+不关联class的protocol
+* 大多数protocol聚集了一堆相关方法，并不关联class
+* 这种protocol使用ing形式以和class区分开来
+
+关联class的protocol
+* 一些protoco聚集了一堆无关方法，并试图与某个class关联在一起，由这个class来主导
+  * 这种protocol与class同名 如NSObject protocol
 
 
 ### <a name='namespace'></a>命名空间
