@@ -221,6 +221,24 @@ IB                           | Interface Builder
   1. - (void)invokeWithTarget:(id)target;
   2. - (void)selectTabViewItem:(NSTabViewItem *)tabViewItem
 
+* 如果方法返回接收者的属性，以 接收者 + 接收的属性 命名
+  * 除非间接返回多个值，否则不要使用 get 单词（为了与accessor methods区分）
+
+-----------------------------|-----------
+-(NSSize)cellSize            | √
+-(NSSize)calcCellSize        | x
+-(NSSize)getCellSize         | x
+
+在所有参数之前使用关键字
+--------------------------------------|-----------
+-(void)sendAction:(SEL)aSelector      |
+        toObject:(id)anObject         | √
+        forAllCells:(BOOL)flag;       |
+-(NSSize)sendAction:(SEL)aSelector    | 
+         :(id)anObject                | x
+         :(BOOL)flag;                 |
+
+
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
 * 以 `get`、`set` 开头的方法有特殊的意义，不要随意定义。
   1. set 是属性默认的设置方法，如果函数不是为了设置类成员，则不要用 `set` 开头，可用 `setup` 替代。
