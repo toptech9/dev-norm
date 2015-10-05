@@ -13,6 +13,7 @@ Objective-C 编码规范
   * [class与protocol命名](#class-protocol)
   * [头文件](#header-file)
   * [方法名](#naming-method)
+  * [函数](#naming-function)
   * [协议名](#naming-protocol)
   * [通知命名](#naming-notifications)
   * [临时变量命名](#naming-temporary-variable)
@@ -480,6 +481,36 @@ will 表示某些事将要发生
 
 总之，为子类的私有方法添加前缀是为了不覆盖其父类的私有方法
 
+
+### <a name='naming-function'></a>函数
+
+* 函数的命名类似方法，但有两点要注意
+  * 你使用的类和常量拥有相同的前缀
+  * 前缀后的首字母大写
+
+
+许多函数名以描述其作用的动词开始
+```Objective-C
+NSHighlightRect
+NSDeallocateObject
+```
+查询属性的函数有进一步的命名规则
+
+如果函数返回首个参数的属性，省略动词
+```Objective-C
+unsigned int NSEventMaskFromType(NSEventType type) 
+float NSHeight(NSRect aRect)
+```
+如果通过reference返回了值，使用 “Get”
+
+```Objective-C
+const char *NSGetSizeAndAlignment(const char *typePtr, unsigned int *sizep, unsigned int *alignp)
+```
+如果返回的是boolean值，应该灵活使用动词 
+
+```Objective-C
+BOOL NSDecimalIsNotANumber(const NSDecimal *decimal)
+```
 
 ### <a name='naming-protocol'></a>协议名
 好的协议名应能立刻让人分辨出这不是一个类名，除了以常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：`NSCoding`、`NSCopying`、`NSLocking`。
