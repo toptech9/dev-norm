@@ -231,6 +231,8 @@ Code                         | Commentary
 -(NSSize)getCellSize         | x
 
 在所有参数之前使用关键字
+
+Code                                  | Commentary
 --------------------------------------|-----------
 -(void)sendAction:(SEL)aSelector      |
         toObject:(id)anObject         | √
