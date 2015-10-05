@@ -261,9 +261,9 @@ Code                                                                            
 
 * 除非方法描述了两个独立的操作，才使用 and 来连接它们
 
-Code                                                                                                       | Commentary
------------------------------------------------------------------------------------------------------------|-----------
--(BOOL)openFile:(NSString *)fullPath   withApplication:(NSString *)appname  andDeactivate:(BOOL)flag       |√
+Code                                                                                                             | Commentary
+-----------------------------------------------------------------------------------------------------------------|----------
+-(BOOL)openFile:(NSString *)fullPath      withApplication:(NSString *)appname      andDeactivate:(BOOL)flag      |√
 
 
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
