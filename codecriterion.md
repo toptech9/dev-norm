@@ -513,7 +513,7 @@ const char *NSGetSizeAndAlignment(const char *typePtr, unsigned int *sizep, unsi
 BOOL NSDecimalIsNotANumber(const NSDecimal *decimal)
 ```
 
-### <a name='naming-property'></a>[Property及其他
+### <a name='naming-property'></a>Property及其他
 
 1.1 Property
 
