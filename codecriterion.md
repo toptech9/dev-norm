@@ -211,6 +211,16 @@ AB                           | Address Book
 IB                           | Interface Builder
 
 ### <a name='naming-method'></a>方法名
+* 以小写字母开始，之后单词的首字母大写。
+  1. 以众所周知的缩写开始可以大写，如TIFF、PDF
+  2. 私有方法可以加前缀
+
+* 如果方法代表对象接收的动作，以动词开始
+  * 不要使用 do 或 does 作为名字的一部分，因为助动词在这里很少有实际意义
+  * 同样的，也别在动词之前使用副词和形容词
+  1. - (void)invokeWithTarget:(id)target;
+  2. - (void)selectTabViewItem:(NSTabViewItem *)tabViewItem
+
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
 * 以 `get`、`set` 开头的方法有特殊的意义，不要随意定义。
   1. set 是属性默认的设置方法，如果函数不是为了设置类成员，则不要用 `set` 开头，可用 `setup` 替代。
