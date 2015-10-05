@@ -369,6 +369,42 @@ removeObject:            // OK
 remove:                  // 糟糕，什么被移除了？
 ```
 
+<a></a>3.Delegate方法
+以发送消息的对象开始
+
+省略了前缀的类名和首字母小写
+```Objective-C
+- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(int)row; 
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename;
+```
+以发送消息的对象开始的规则不适用下列两种情况
+
+只有一个sender参数的方法
+
+```Objective-C
+- (BOOL)applicationOpenUntitledFile:(NSApplication *)sender;
+```
+响应notification的方法（方法的唯一参数就是notification）
+
+```Objective-C
+- (void)windowDidChangeScreen:(NSNotification *)notification;
+```
+使用单词 did 和 will 来通知delegate
+
+did 表示某些事已发生
+will 表示某些事将要发生
+```Objective-C
+- (void)browserDidScroll:(NSBrowser *)sender;
+- (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window;
+```
+
+询问delegate是否可以执行某个行为时可以使用 did 或 will，不过 should 更完美  
+
+```Objective-C
+- (BOOL)windowShouldClose:(id)sender;
+```
+
+
 ### <a name='naming-protocol'></a>协议名
 好的协议名应能立刻让人分辨出这不是一个类名，除了以常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：`NSCoding`、`NSCopying`、`NSLocking`。
 
