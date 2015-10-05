@@ -232,14 +232,10 @@ Code                         | Commentary
 
 在所有参数之前使用关键字
 
-Code                                  | Commentary
---------------------------------------|-----------
--(void)sendAction:(SEL)aSelector      |
-        toObject:(id)anObject         | √
-        forAllCells:(BOOL)flag;       |
--(NSSize)sendAction:(SEL)aSelector    | 
-         :(id)anObject                | x
-         :(BOOL)flag;                 |
+Code                                                                                 | Commentary
+-------------------------------------------------------------------------------------|-----------
+-(void)sendAction:(SEL)aSelector  toObject:(id)anObject  forAllCells:(BOOL)flag;     |√
+-(void)sendAction:(SEL)aSelector  :(id)anObject  :(BOOL)flag;                        |x
 
 
 * 以 `alloc`、`copy`、`init`、`mutableCopy`、`new` 开头的方法要注意，它们会改变ARC的行为。[^1]
