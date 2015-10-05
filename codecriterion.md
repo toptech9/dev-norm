@@ -224,6 +224,7 @@ IB                           | Interface Builder
 * 如果方法返回接收者的属性，以 接收者 + 接收的属性 命名
   * 除非间接返回多个值，否则不要使用 get 单词（为了与accessor methods区分）
 
+Code                         | Commentary
 -----------------------------|-----------
 -(NSSize)cellSize            | √
 -(NSSize)calcCellSize        | x
