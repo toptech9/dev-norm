@@ -14,6 +14,7 @@ Objective-C 编码规范
   * [头文件](#header-file)
   * [方法名](#naming-method)
   * [函数](#naming-function)
+  * [Property及其他](#naming-property)
   * [协议名](#naming-protocol)
   * [通知命名](#naming-notifications)
   * [临时变量命名](#naming-temporary-variable)
@@ -511,6 +512,59 @@ const char *NSGetSizeAndAlignment(const char *typePtr, unsigned int *sizep, unsi
 ```Objective-C
 BOOL NSDecimalIsNotANumber(const NSDecimal *decimal)
 ```
+
+### <a name='naming-property'></a>[Property及其他
+
+1.1 Property
+
+Property命名规则与第二章accessor methods一样（因为两者紧密联系）
+
+如果property表示为一个名词或动词，格式如下
+
+@property (…) 类型 名词/动词 ;
+
+```Objective-C
+@property (strong) NSString *title;
+@property (assign) BOOL showsAlpha;
+```
+如果property表示为一个形容词
+
+可省略 ”is” 前缀
+但要指定getter方法的惯用名称
+```Objective-C
+@property (assign, getter=isEditable) BOOL editable;
+```
+1.2 实例变量
+
+通常不应该直接访问实例变量
+```Objective-C
+init、dealloc、accessor methods等方法内部例外
+```
+实例变量以下划线 “_” 开始
+
+确保实例变量描述了所存储的属性
+
+```Objective-C
+@implementation MyClass {
+   BOOL _showsTitle;
+}
+```
+如果想要修改property的实例变量名，使用 @synthesize语句
+
+```Objective-C
+@implementation MyClass
+@synthesize showsTitle=_showsTitle;
+```
+为一个class添加实例变量时，有几点需要注意：
+
+避免声明公有实例变量
+开发者关注的应该是对象接口，而不是其数据细节
+你可以通过使用property来避免声明实例变量
+如果需要声明实例变量，指定关键字@private 或 @protected
+如果你希望子类可以直接访问某个实例变量，使用 @protected 关键字
+如果一个实例变量是某个类可访问的属性，确保写了accessor methods
+如果有可能，还是使用property
+
 
 ### <a name='naming-protocol'></a>协议名
 好的协议名应能立刻让人分辨出这不是一个类名，除了以常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：`NSCoding`、`NSCopying`、`NSLocking`。
