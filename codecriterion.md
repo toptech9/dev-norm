@@ -437,6 +437,49 @@ will 表示某些事将要发生
 - (void)setParentWindow:(NSWindow *)window;
 ```
 
+5.方法参数 
+
+参数名以小写字母开始，之后的单词首字母大写
+```Objective-C
+如：removeObject:(id)anObject
+```
+别使用 ”pointer” 或 ”ptr” 命名
+参数类型里就已表明它是否是一个指针
+避免只有一到二个字母的参数名
+避免只有几个字母的缩写
+```Objective-C
+...action:(SEL)aSelector
+...alignment:(int)mode
+...atIndex:(int)index
+...content:(NSRect)aRect
+...doubleValue:(double)aDouble 
+...floatValue:(float)aFloat 
+...font:(NSFont *)fontObj  
+...frame:(NSRect)frameRect 
+...intValue:(int)anInt
+...keyEquivalent:(NSString *)charCode
+...length:(int)numBytes
+...point:(NSPoint)aPoint
+...stringValue:(NSString *)aString
+...tag:(int)anInt
+...target:(id)anObject
+...title:(NSString *)aString
+```
+
+6.私有方法
+
+不要使用下划线作为私有方法的前缀，Apple保留这一使用方式
+
+因为若是你的私有方法名已被Apple使用，覆盖它将会产生极难追踪的BUG
+
+如果继承自大型Cocoa框架（如UIView），请确保子类的私有方法名与父类不一样
+
+可以为私有方法加一个前缀，如公司名或项目名：XX_
+
+例如你的项目叫做Byte Flogger，那么前缀可能是：BF_addObject
+
+总之，为子类的私有方法添加前缀是为了不覆盖其父类的私有方法
+
 
 ### <a name='naming-protocol'></a>协议名
 好的协议名应能立刻让人分辨出这不是一个类名，除了以常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：`NSCoding`、`NSCopying`、`NSLocking`。
