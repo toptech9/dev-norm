@@ -2,25 +2,6 @@
 这份资料主要收集iOS开放常用的框架，库，AP，工具, 学习资料, 学习心得
 
 
-## 书籍
-
-书籍名称 | 推荐理由
-------- | -------
-[Objective-C Programming](http://www.amazon.com/dp/032194206X/ref=cm_sw_r_tw_dp_fWrPub0BGRHJ3) | 内容不多, 却都是精华, 有了一点 C 语言基础可以快速阅读此书, 大概一天时间就可以看完, 看完后对 iOS 开发能够有个基本的印象
-[iOS Programming](http://book.douban.com/subject/24538384) | iOS 又一本极佳的入门书籍, 具体评价可见豆瓣下方该书籍的评论
-[Cocoa Design Patterns](http://book.douban.com/subject/3688896) | 适合打算深入了解 Cocoa 的人看
-[Learn Objective-C](http://cocoadevcentral.com/d/learn_objectivec) | 短小精练, 适合有编程基础的人在半小时内对 Objective-C 有个一定了解
-[Programming with Objective-C](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html) | 看完 Learn Obj-C 可以接着看这个官方对 Objective-C 更为深入的介绍
-[iPhone Programming](http://book.douban.com/subject/5314055) | 这本书在 Quora 上被评为 iOS 入门最佳书籍
-[Objective-C 基础教程](http://www.amazon.cn/dp/B00COG40Y0/ref=cm_sw_r_qz_2_dp_l2OPub0N45R0Q) | 该书作者 Scott Knaster 是 Mac 开发界的传奇人物, 目前在 Google 出过多数书籍都广受许多程序员好评, 此书适合从初级跳到中级的 iOS 开发者阅读
-[iOS 开发进阶](http://www.amazon.cn/dp/B00R43XG9S/ref=cm_sw_r_qz_pi_T2A_jdp_fCPPub0VBF67T) | 该书作者唐巧是国内 iOS 开发界的名人, 曾参与多个知名软件的开发, 目前该书尚在预售中, 书本内容由浅入深, 将读者一步一步引入到 iOS 中去, 同样适合初级跳到中级的 iOS 开发者阅读
-[Programming in Objective-C](http://www.amazon.com/Programming-Objective-C-Edition-Developers-Library/dp/0321967607) | 这本书在亚马逊上面深受欢迎, 有关 Objective-C 的东西讲得非常详细
-[iOS 测试指南](http://www.amazon.cn/dp/B00JPVNFKM/ref=cm_sw_r_qz_4_dp_tdPPub14X59PV) | 该书作者是豆瓣的员工, 书中写的多数内容都是作者在平时的工作实践当中提炼出来的测试经验, 重点讲述了各个测试阶段的具体实践方法, 并且通过持续集成串联了各个测试阶段的活动。
-[Objective-C编程之道](http://book.douban.com/subject/6920082) | 解析 iOS 的开山之作, 详细介绍了 MVC 在 Cocoa Touch 上的运作过程, 该书适用于 iOS 中级开发者阅读
-[Objective-C高级编程](http://www.amazon.cn/dp/B00DE60G3S/ref=cm_sw_r_qz_2_dp_hdPPub11MFE6G) | 本书主要介绍 iOS 与 OS X 多线程和内存管理, 深入破析了苹果官方公布的源代码,  告诉你一些苹果公司官方文档中不会出现的知识, 适合中级以上 iOS 开发人员阅读
-[Effective Objective C 2.0](http://www.amazon.cn/dp/B00IDSGY06/ref=cm_sw_r_qz_2_dp_A2OPub0CH96YH) | 书里写了编写高质量iOS与OS X代码的52个有效方法, 适合 iOS 开发的进阶使用
-[Swift Fundamentals](http://www.amazon.com/dp/0990402053/ref=cm_sw_r_tw_dp_louPub127Q1YP) | 估计将来这本书会成为 Swift 的经典入门书籍, 它的 Stars 数说明了一切
-[The Swift Programming Language 中文版](http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content) | 90 后开发者梁杰组织翻译的 Swift 编程语言中文版
 
 ## 博客
 
@@ -158,20 +139,3 @@
 50. [BlocksKit](https://github.com/zwaldowski/BlocksKit) | 一个开源的与 Cocoa 紧密集合的基础性框架
 
 
-
-## 文档
-
-- [iOS Developer Library](https://developer.apple.com/library/ios/navigation) (iOS 开发必看, 有此文档足矣, 内容非常之详细)
-
-## 指南/教程
-
-网址  |  简介
----- | ----
-[App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines) | iOS 应用商店审核指南, 有[中文翻译版](http://www.cocoachina.com/ios/20140227/7892.html)
-[Swift 语言指南](http://dev.swiftguide.cn) | 有很多丰富的 Swift 学习资料, 学习 Swift 有这份资料可以省下很多力气
-[苹果 Xcode 帮助文档阅读指南](http://ourcoders.com/thread/show/117) | Tinyfool 推出的一篇对于帮助新手阅读官方文档的指南
-[Get started with your iOS developer pragram](https://developer.apple.com/programs/ios/gettingstarted) | 苹果写的一篇入门指南, 粗略讲解了 iOS 程序从开发到上架的整个流程
-[Teamtreehouse](http://blog.teamtreehouse.com/the-beginners-guide-to-objective-c-language-and-variables) | 文章主要讲解 Objective-C 的一些语法, 文章内容有趣且通俗易懂
-[A map for iOS development](http://www.appdeveloperatlas.com) | 一张 iOS 开发地图, 做得很赞, 看完对 iOS 开发流程有一定的认知
-[Start Developing iOS Apps Today](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS) | 苹果官方给出的 iOS 入门教程, 看过之后能够做一个 To-Do 小程序
-[Ry’s Objective-C Tutorial](http://rypress.com/tutorials/objective-c) | 讲解 Objective-C 的教程, 图文并茂, 适合新手阅读
