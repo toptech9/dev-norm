@@ -952,8 +952,46 @@ UIButton *btnSend;/**< 发送按钮 */
 ```
 
 在调用时可以得到提示，在内容比较多时比较好用，我有时候脑子短路要想好一会才能记得当初定义的变量是做什么用的。
+
 ![](http://static.oschina.net/uploads/space/2015/0514/161031_B8SF_735123.png)  
 
+####方法的注释
+如果你的方法是没有参数的，只需要写一句注释，那只需要在方法前加注释就行了
+```Objective-C
+UIButton *btnSend;/**< 发送按钮 */
+```
+type 1
+```Objective-C
+/** table 相关设置 */
+-(void)configTable{}
+```
+
+type 2（插件：VVDocument）使用此插件可以很便捷的为自己的代码添加注释
+```Objective-C
+/*!
+ *  @author joanfen, 15-05-14 12:05:22
+ *
+ *  @brief  相关设置
+ */
+-(void)configTable{}
+```
+这样的注释 在你调用时会显示你所添加注释，如图
+
+![](http://static.oschina.net/uploads/space/2015/0514/121231_jCac_735123.png)  
+
+有参数的注释
+```Objective-C
+/*!
+ *  @Author joanfen, 15-05-13 14:01:51
+ *  @method POST
+ *  @see XRClass
+ *  @brief  链接解析
+ *
+ *  @param linkAddressStr 链接地址
+ */
+
+```
+大家使用VVDocument 的插件来写注释就对了。这样的注释自己写起来太费事，没有插件我真不愿意写。
 
 
 
