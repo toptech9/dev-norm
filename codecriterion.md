@@ -734,22 +734,32 @@ init         | Initialize
 int          | Integer
 max          | Maximum
 msg          | Message
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
-calc         | Calculate
+nib          | interface Builder archive
+pboard       | Pasteboard
+rect         | Rectangle
+Rep          | Representation
+temp         | Temporay
+vert         | Vertical
 
-
-
+缩写         | 全称
+-------------|-----
+ASCII        | American Standard Code for Information Interchange
+PDF          | Portable Document Format
+XML          | Extensible Markup Language
+HTML         | HyperTextMarkup Language
+URL          | Uninform Resource Locator
+RTF          | Rich TextFormat
+HTTP         | HyperTextTransfer Protocol
+TIFF         | Tagged Image File Format
+JPG/JPEG     | Joint Photographbic Experts GROUP
+PNG          | Portable Network Graphic Format
+GIF          | Graphic Interchange Format
+LZW          | Lempel Ziv Welch
+ROM          | Read-Only Memory
+RGB          | R(red), G(green), B(blue)
+CMYK         | C: Cyan  M:Magenta Y:Yellow  K:Key Plate(black)
+MIDI         | Musical Instrument Digital Interface
+FTP          | File Transfer Protocol
 
 
 ### <a name='naming-others'></a>其他
