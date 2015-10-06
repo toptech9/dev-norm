@@ -1207,6 +1207,116 @@ ushort APIFetchPageSizeDefault = 10;
 
 > 注释应该表达那些代码没有表达以及无法表达的东西。如果一段注释被用于解释一些本应该由这段代码自己表达的东西，我们就应该将这段注释看成一个改变代码结构或编码惯例直至代码可以自我表达的信号。我们重命名那些糟糕的方法和类名，而不是去修补。我们选择将长函数中的一些代码段抽取出来形成一些小函数，这些小函数的名字可以表述原代码段的意图，而不是对这些代码段进行注释。尽可能的通过代码进行表达。你通过代码所能表达的和你想要表达的所有事情之间的差额将为注释提供了一个合理的候选使用场合。对那些代码无法表达的东西进行注释，而不要仅简单地注释那些代码没有表达的东西。”[^2]
 
+###文件注释
+
+每一个文件都**必须**写文件注释，文件注释通常包含
+
+- 文件所在模块
+- 作者信息
+- 历史版本信息
+- 版权信息
+- 文件包含的内容，作用
+
+一段良好文件注释的栗子：
+
+```objective-c
+/*******************************************************************************
+	Copyright (C), 2011-2013, Andrew Min Chang
+
+	File name: 	AMCCommonLib.h
+	Author:		Andrew Chang (Zhang Min) 
+	E-mail:		LaplaceZhang@126.com
+	
+	Description: 	
+			This file provide some covenient tool in calling library tools. One can easily include 
+		library headers he wants by declaring the corresponding macros. 
+			I hope this file is not only a header, but also a useful Linux library note.
+			
+	History:
+		2012-??-??: On about come date around middle of Year 2012, file created as "commonLib.h"
+		2012-08-20: Add shared memory library; add message queue.
+		2012-08-21: Add socket library (local)
+		2012-08-22: Add math library
+		2012-08-23: Add socket library (internet)
+		2012-08-24: Add daemon function
+		2012-10-10: Change file name as "AMCCommonLib.h"
+		2012-12-04: Add UDP support in AMC socket library
+		2013-01-07: Add basic data type such as "sint8_t"
+		2013-01-18: Add CFG_LIB_STR_NUM.
+		2013-01-22: Add CFG_LIB_TIMER.
+		2013-01-22: Remove CFG_LIB_DATA_TYPE because there is already AMCDataTypes.h
+
+	Copyright information: 
+			This file was intended to be under GPL protocol. However, I may use this library
+		in my work as I am an employee. And my company may require me to keep it secret. 
+		Therefore, this file is neither open source nor under GPL control. 
+		
+********************************************************************************/
+```
+
+*文件注释的格式通常不作要求，能清晰易读就可以了，但在整个工程中风格要统一。*
+
+###代码注释
+
+好的代码应该是“自解释”（self-documenting）的，但仍然需要详细的注释来说明参数的意义、返回值、功能以及可能的副作用。
+
+方法、函数、类、协议、类别的定义都需要注释，推荐采用Apple的标准注释风格，好处是可以在引用的地方`alt+点击`自动弹出注释，非常方便。
+
+有很多可以自动生成注释格式的插件，推荐使用[VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode)：
+
+![Screenshot](https://raw.github.com/onevcat/VVDocumenter-Xcode/master/ScreenShot.gif)
+
+一些良好的注释：
+
+```objective-c
+/**
+ *  Create a new preconnector to replace the old one with given mac address.
+ *  NOTICE: We DO NOT stop the old preconnector, so handle it by yourself.
+ *
+ *  @param type       Connect type the preconnector use.
+ *  @param macAddress Preconnector's mac address.
+ */
+- (void)refreshConnectorWithConnectType:(IPCConnectType)type  Mac:(NSString *)macAddress;
+
+/**
+ *  Stop current preconnecting when application is going to background.
+ */
+-(void)stopRunning;
+
+/**
+ *  Get the COPY of cloud device with a given mac address.
+ *
+ *  @param macAddress Mac address of the device.
+ *
+ *  @return Instance of IPCCloudDevice.
+ */
+-(IPCCloudDevice *)getCloudDeviceWithMac:(NSString *)macAddress;
+
+// A delegate for NSApplication to handle notifications about app
+// launch and shutdown. Owned by the main app controller.
+@interface MyAppDelegate : NSObject {
+  ...
+}
+@end
+```
+
+协议、委托的注释要明确说明其被触发的条件：
+
+```objective-c
+/** Delegate - Sent when failed to init connection, like p2p failed. */
+-(void)initConnectionDidFailed:(IPCConnectHandler *)handler;
+```
+
+如果在注释中要引用参数名或者方法函数名，使用`||`将参数或者方法括起来以避免歧义：
+
+```objective-c
+// Sometimes we need |count| to be less than zero.
+
+// Remember to call |StringWithoutSpaces("foo bar baz")|
+```
+
+**定义在头文件里的接口方法、属性必须要有注释！**
+
 虽说好的代码不用注释,但是那得是好的代码..好记性不如烂笔头，好好写注释可以给自己和自己的小伙伴省下很多时间.
 
 注释都是// 或是/* 注释 */ ，这样的通用注释不做多说明，这里介绍一些稍带技巧的注释：
