@@ -716,6 +716,41 @@ setBackgroundColor:        // OK
 setBkgdColor:              // 糟糕
 ```
 
+设计编程接口时通常不应使用缩写，但下列已被广泛使用的缩写名称除外
+标准C库中的缩写名，如：alloc、init
+参数名可自由使用缩写，如：imageRep、col、obj、otherWin
+
+缩写         | 全称
+-------------|-----
+alloc        | Allocate
+alt          | Alternate
+app          | Application
+calc         | Calculate
+dealloc      | Deallocate
+func         | Function
+horiz        | Horizontal
+info         | Infomation
+init         | Initialize
+int          | Integer
+max          | Maximum
+msg          | Message
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+calc         | Calculate
+
+
+
+
 
 ### <a name='naming-others'></a>其他
 i，j专用于循环标号
