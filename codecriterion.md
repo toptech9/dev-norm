@@ -960,6 +960,8 @@ ushort APIFetchPageSizeDefault = 10;
 * [Apple Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * [Google Objective-C Style Guide](https://google-styleguide.googlecode.com/svn/trunk/objcguide.xml?showone=Line_Length#Line_Length)
 * [Objective-C开发编码规范：4大方面解决开发中的规范性问题](http://www.cocoachina.com/ios/20150507/11780.html)
+* [我是如何收拾代码的](http://my.oschina.net/joanfen/blog/415058)
+* [iOS开发，事半功倍基本心得](http://www.cocoachina.com/ios/20150615/12125.html)
 * [Coding Guidelines for Cocoa](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * https://github.com/github/objective-c-conventions
 * https://github.com/jverkoey/iOS-Best-Practices
