@@ -1318,6 +1318,7 @@ UI 写好了，数据部分还没有好，将逻辑梳理好，方法写好，�
 * [Objective-C开发编码规范：4大方面解决开发中的规范性问题](http://www.cocoachina.com/ios/20150507/11780.html)
 * [我是如何收拾代码的](http://my.oschina.net/joanfen/blog/415058)
 * [iOS开发，事半功倍基本心得](http://www.cocoachina.com/ios/20150615/12125.html)
+* [Objective-C编码规范](https://github.com/QianKaiLu/Objective-C-Coding-Guidelines-In-Chinese)
 * [Coding Guidelines for Cocoa](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * https://github.com/github/objective-c-conventions
 * https://github.com/jverkoey/iOS-Best-Practices
