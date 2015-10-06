@@ -19,6 +19,7 @@ Objective-C 编码规范
   * [通知命名](#naming-notifications)
   * [临时变量命名](#naming-temporary-variable)
   * [常量](#naming-constant)
+  * [例外](#naming-exceptions)
   * [大小写](#naming-match-case)
   * [缩写](#abbreviation)
   * [其他](#naming-others)
@@ -676,6 +677,21 @@ UDk    | User Default key
 APIURL | 接口地址
 
 另见：[常量管理](#constant)
+
+### <a name='naming-exceptions'></a>例外
+
+Exception的格式
+
+'[Prefix] + [UniquePartOfName] + Exception'
+
+```Objective-C
+NSColorListIOException
+NSColorListNotEditableException
+NSDraggingException  
+NSFontUnavailableException
+NSIllegalSelectorException
+```
+
 
 ### <a name='naming-match-case'></a>大小写
 * 类名采用大驼峰（`UpperCamelCase`）
