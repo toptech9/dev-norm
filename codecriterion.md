@@ -993,6 +993,42 @@ type 2（插件：VVDocument）使用此插件可以很便捷的为自己的代�
 ```
 大家使用VVDocument 的插件来写注释就对了。这样的注释自己写起来太费事，没有插件我真不愿意写。
 
+####方法分区
+
+```Objective-C
+#pragma mark - <注释，也可不写，没有注释时就只显示一条分割线>
+#pragma mark 注释
+```
+区别：带 - 的会显示一条分割线
+
+![](http://static.oschina.net/uploads/space/2015/0514/162252_0ZSV_735123.png)  
+
+便于简单快速的查找方法
+
+
+####添加提示信息
+```Objective-C
+#error <提示信息>
+```
+如果加上这样的错误提示，在 Build 时 XCode 会提示编译错误：
+
+![](http://static.oschina.net/uploads/space/2015/0514/162847_OcyP_735123.png)  
+![](http://static.oschina.net/uploads/space/2015/0514/162847_FcKX_735123.png)  
+
+在某部分代码没有完成，而且如果提交会导致问题时可以加上这样的提示信息来提醒自己。
+
+如果你觉得只是想提醒自己来完成，并不需要加上红色的 error 信息，你可以尝试使用
+
+```Objective-C
+#warning <提示信息>
+```
+这样的话在编译时提示信息是这样的
+![](http://static.oschina.net/uploads/space/2015/0514/163150_wHPF_735123.png) 
+
+#####添加提示信息
+在替换某个类时，需要删除原有的代码，再进行替换，每次删除一个我就加一行同样的 warning，最后新的写好之后，搜索这行 waring，将调用方法填充，大大提高效率；
+
+UI 写好了，数据部分还没有好，将逻辑梳理好，方法写好，加上 warning ，包含 deadline，需要完成的工作，在后台数据可测时，再来完成，不写的话有时候真的脑子短路，有时候半天都不记得当时是准备怎么弄的，尤其在开发量大的时候，原谅我是一个容易脑子短路的人，-_-。
 
 
 ### <a name='block-comment'></a>块注释
