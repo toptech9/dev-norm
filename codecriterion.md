@@ -741,6 +741,8 @@ Rep          | Representation
 temp         | Temporay
 vert         | Vertical
 
+
+
 缩写         | 全称
 -------------|-----
 ASCII        | American Standard Code for Information Interchange
