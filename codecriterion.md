@@ -636,6 +636,25 @@ enum {
 ```
 
 2.2 使用const关键字的常量 
+对于常量，尽量使用const 常量，不要使用宏
+
+在方法体内使用
+```Objective-C
+static const CGFloat KCellHight = 126.f;
+```
+在类文件中使用, 在.m 文件中
+
+```Objective-C
+const CGFloat KXRBtnSendHeight = 44;
+```
+
+如果需要提供给外部使用，使用 extern 修饰：
+
+只需要在.h 中使用 extern 外部声明即可
+
+```Objective-C
+extern const CGFloat KXRBtnSendHeight;/**< send按钮高度 */
+```
 
 使用const关键字来创建一个float常量
 
