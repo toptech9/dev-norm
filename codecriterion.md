@@ -571,7 +571,8 @@ init、dealloc、accessor methods等方法内部例外
 
 
 ### <a name='naming-notifications'></a>通知命名
-基本命名格式是：`[与通知相关的类名] + [Did | Will] + [UniquePartOfName] + Notification`，例：
+基本命名格式是：`[与通知相关的类名] + [Did | Will] + [UniquePartOfName] + Notification`，
+`[Name of associated class] + [Did | Will] + [UniquePartOfName] + Notification` 例如：
 
 ```Objective-C
 NSApplicationDidBecomeActiveNotification
