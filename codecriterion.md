@@ -1628,6 +1628,7 @@ array.release;
 * [我是如何收拾代码的](http://my.oschina.net/joanfen/blog/415058)
 * [iOS开发，事半功倍基本心得](http://www.cocoachina.com/ios/20150615/12125.html)
 * [Objective-C编码规范](https://github.com/QianKaiLu/Objective-C-Coding-Guidelines-In-Chinese)
+* [写iOS SDK注意事项](http://blog.devtang.com/blog/2015/01/31/write-sdk-tips/)
 * [Coding Guidelines for Cocoa](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * https://github.com/github/objective-c-conventions
 * https://github.com/jverkoey/iOS-Best-Practices
