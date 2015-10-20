@@ -84,3 +84,6 @@ BViewController *secondVC = VCFromSB(storyboardPatient, @"XRPatientAllVC");
 
 案例不是太好写，要写得好长一篇文章了，我还得想一项目，可以参考这部分文章：
 [更轻量的 ViewControllers](http://objccn.io/issue-1/)  
+
+Objective C 源代码内容应该按这样的顺序组织代码：
+先是life cycle，然后是Delegate方法实现，然后是event response，然后才是getters and setters。这样后来者阅读代码时就能省力很多
